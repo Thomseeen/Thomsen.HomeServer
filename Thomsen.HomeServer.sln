@@ -11,6 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thomsen.HomeServer.Api", "s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thomsen.HomeServer.Core", "src\Thomsen.HomeServer.Core\Thomsen.HomeServer.Core.csproj", "{1FAC2522-8EE4-45C0-912B-93E11E90CF75}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CD39011B-584C-4A47-9FA1-3B13D97EBF63}"
+	ProjectSection(SolutionItems) = preProject
+		build\cleanup.py = build\cleanup.py
+		build\publish.ps1 = build\publish.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
