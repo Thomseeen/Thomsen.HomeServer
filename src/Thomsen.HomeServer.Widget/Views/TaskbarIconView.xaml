@@ -1,0 +1,39 @@
+﻿<Window
+    x:Class="Thomsen.HomeServer.Widget.Views.TaskbarIconView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:tb="http://www.hardcodet.net/taskbar"
+    xmlns:vm="clr-namespace:Thomsen.HomeServer.Widget.ViewModels"
+    d:DataContext="{d:DesignInstance Type=vm:TaskbarIconViewModel}"
+    mc:Ignorable="d">
+
+    <Window.Resources>
+        <Style TargetType="tb:TaskbarIcon">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding MainViewModel.Connected}" Value="true">
+                    <Setter Property="IconSource" Value="/Resources/StatusOK.ico" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding MainViewModel.Connected}" Value="false">
+                    <Setter Property="IconSource" Value="/Resources/StatusStopped.ico" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <tb:TaskbarIcon DoubleClickCommand="{Binding ShowMainWindowCmd}">
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Command="{Binding ShowMainWindowCmd}" Header="_Show" />
+                    <MenuItem Command="{Binding HideMainWindowCmd}" Header="_Hide" />
+
+                    <Separator />
+
+                    <MenuItem Command="{Binding ExitCmd}" Header="_Exit" />
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
+        </tb:TaskbarIcon>
+    </Grid>
+</Window>

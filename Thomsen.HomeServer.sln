@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thomsen.HomeServer.Service", "src\Thomsen.HomeServer.Service\Thomsen.HomeServer.Service.csproj", "{ACABB96D-8862-4FE8-9383-B80B76CB332B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thomsen.HomeServer.Widget", "src\Thomsen.HomeServer.Widget\Thomsen.HomeServer.Widget.csproj", "{9F767C0A-C695-4932-9452-F9C6BEB6DA53}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thomsen.HomeServer.Api", "src\Thomsen.HomeServer.Api\Thomsen.HomeServer.Api.csproj", "{FCE68665-3A66-4042-8643-DD9F44D307C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thomsen.HomeServer.Core", "src\Thomsen.HomeServer.Core\Thomsen.HomeServer.Core.csproj", "{1FAC2522-8EE4-45C0-912B-93E11E90CF75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACABB96D-8862-4FE8-9383-B80B76CB332B}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{ACABB96D-8862-4FE8-9383-B80B76CB332B}.Debug|x64.ActiveCfg = Debug|x64
+		{ACABB96D-8862-4FE8-9383-B80B76CB332B}.Debug|x64.Build.0 = Debug|x64
+		{ACABB96D-8862-4FE8-9383-B80B76CB332B}.Release|Any CPU.ActiveCfg = Release|x64
+		{ACABB96D-8862-4FE8-9383-B80B76CB332B}.Release|x64.ActiveCfg = Release|x64
+		{ACABB96D-8862-4FE8-9383-B80B76CB332B}.Release|x64.Build.0 = Release|x64
+		{9F767C0A-C695-4932-9452-F9C6BEB6DA53}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{9F767C0A-C695-4932-9452-F9C6BEB6DA53}.Debug|x64.ActiveCfg = Debug|x64
+		{9F767C0A-C695-4932-9452-F9C6BEB6DA53}.Debug|x64.Build.0 = Debug|x64
+		{9F767C0A-C695-4932-9452-F9C6BEB6DA53}.Release|Any CPU.ActiveCfg = Release|x64
+		{9F767C0A-C695-4932-9452-F9C6BEB6DA53}.Release|x64.ActiveCfg = Release|x64
+		{9F767C0A-C695-4932-9452-F9C6BEB6DA53}.Release|x64.Build.0 = Release|x64
+		{FCE68665-3A66-4042-8643-DD9F44D307C8}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{FCE68665-3A66-4042-8643-DD9F44D307C8}.Debug|x64.ActiveCfg = Debug|x64
+		{FCE68665-3A66-4042-8643-DD9F44D307C8}.Debug|x64.Build.0 = Debug|x64
+		{FCE68665-3A66-4042-8643-DD9F44D307C8}.Release|Any CPU.ActiveCfg = Release|x64
+		{FCE68665-3A66-4042-8643-DD9F44D307C8}.Release|x64.ActiveCfg = Release|x64
+		{FCE68665-3A66-4042-8643-DD9F44D307C8}.Release|x64.Build.0 = Release|x64
+		{1FAC2522-8EE4-45C0-912B-93E11E90CF75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FAC2522-8EE4-45C0-912B-93E11E90CF75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FAC2522-8EE4-45C0-912B-93E11E90CF75}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1FAC2522-8EE4-45C0-912B-93E11E90CF75}.Debug|x64.Build.0 = Debug|Any CPU
+		{1FAC2522-8EE4-45C0-912B-93E11E90CF75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FAC2522-8EE4-45C0-912B-93E11E90CF75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FAC2522-8EE4-45C0-912B-93E11E90CF75}.Release|x64.ActiveCfg = Release|Any CPU
+		{1FAC2522-8EE4-45C0-912B-93E11E90CF75}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44C28D8C-606D-40D8-BA13-DC7C4B655774}
+	EndGlobalSection
+EndGlobal

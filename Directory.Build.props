@@ -1,0 +1,19 @@
+<Project>
+    <PropertyGroup>
+        <EnablePreviewFeatures>true</EnablePreviewFeatures>
+        <LangVersion>preview</LangVersion>
+        <Nullable>enable</Nullable>
+        
+        <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+        
+        <BaseOutputPath>..\..\bin\lib\</BaseOutputPath>
+        
+        <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+        <EnableNETAnalyzers>True</EnableNETAnalyzers>
+        
+        <Authors>Thomas Wagner</Authors>
+        <Company>Thomas Wagner</Company>
+        <Copyright>Copyright © 2022</Copyright>
+        <RepositoryUrl>https://github.com/Thomseeen/Thomsen.HomeServer</RepositoryUrl>
+    </PropertyGroup>
+</Project>

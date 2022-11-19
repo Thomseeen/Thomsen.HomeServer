@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <UseWPF>true</UseWPF>
+        <Platforms>x64</Platforms>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+
+        <Authors>Thomas Wagner</Authors>
+        <Company>Thomas Wagner</Company>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+
+        <AssemblyName>HomeServerWidget</AssemblyName>
+        <BaseOutputPath>..\..\bin\HomeServerWidget\</BaseOutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Remove="appsettings.json" />
+        <None Remove="Resources\StatusOK.ico" />
+        <None Remove="Resources\StatusStopped.ico" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Thomsen.HomeServer.Core\Thomsen.HomeServer.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Resource Include="Resources\StatusOK.ico" />
+        <Resource Include="Resources\StatusStopped.ico" />
+    </ItemGroup>
+
+</Project>

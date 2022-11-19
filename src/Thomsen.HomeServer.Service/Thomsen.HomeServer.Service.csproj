@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <Platforms>x64</Platforms>
+        <TargetFramework>net6.0</TargetFramework>
+
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+
+        <AssemblyName>HomeServerService</AssemblyName>
+        <BaseOutputPath>..\..\bin\HomeServerService\</BaseOutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Thomsen.HomeServer.Core\Thomsen.HomeServer.Core.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,20 @@
+{
+  "profiles": {
+    "HomeServerService": {
+      "commandName": "Project",
+      "commandLineArgs": "--services Mqtt2InfluxRouter Tado2MqttService",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "commandLineArgs": "HomeServerService.dll --services Mqtt2InfluxRouter Tado2MqttService",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      },
+      "distributionName": ""
+    }
+  }
+}

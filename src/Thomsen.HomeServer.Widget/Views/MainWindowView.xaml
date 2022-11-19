@@ -1,0 +1,97 @@
+﻿<Window
+    x:Class="Thomsen.HomeServer.Widget.Views.MainWindowView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:m="clr-namespace:Thomsen.HomeServer.Core.InfluxDb.Models;assembly=HomeServerCore"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:Thomsen.HomeServer.Widget.ViewModels"
+    Title="{Binding WindowTitle}"
+    Width="500"
+    Height="300"
+    MinWidth="200"
+    MinHeight="100"
+    d:DataContext="{d:DesignInstance Type=vm:MainWindowViewModel}"
+    ResizeMode="CanMinimize"
+    SizeToContent="WidthAndHeight"
+    mc:Ignorable="d">
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type m:Measurement}">
+            <TextBlock>
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}{0:N1} {1}">
+                        <Binding Path="Value" />
+                        <Binding Path="Unit" />
+                    </MultiBinding>
+                </TextBlock.Text>
+                <TextBlock.ToolTip>
+                    <TextBlock Text="{Binding TimeStamp, StringFormat='{}{0:HH:mm.ss dd.MM.yyyy}'}" />
+                </TextBlock.ToolTip>
+            </TextBlock>
+        </DataTemplate>
+    </Window.Resources>
+
+    <DockPanel>
+        <StatusBar DockPanel.Dock="Bottom">
+            <TextBlock MaxWidth="500" Text="{Binding Status}">
+                <TextBlock.ToolTip>
+                    <ToolTip Content="{Binding Status}" />
+                </TextBlock.ToolTip>
+            </TextBlock>
+        </StatusBar>
+
+        <ItemsControl DockPanel.Dock="Top" ItemsSource="{Binding MeasurementsViewModels}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <GroupBox>
+                        <GroupBox.Header>
+                            <TextBlock FontWeight="Bold" Text="{Binding Name}" />
+                        </GroupBox.Header>
+                        <ListView ItemsSource="{Binding SensorMeasurements}">
+                            <ListView.View>
+                                <GridView AllowsColumnReorder="False">
+                                    <GridView.Columns>
+                                        <GridViewColumn
+                                            Width="100"
+                                            DisplayMemberBinding="{Binding Identifier.Key}"
+                                            Header="Key Name" />
+                                        <GridViewColumn
+                                            Width="100"
+                                            DisplayMemberBinding="{Binding Identifier.Value}"
+                                            Header="Key Value" />
+                                        <GridViewColumn
+                                            Width="125"
+                                            DisplayMemberBinding="{Binding Last.TimeStamp, StringFormat='{}{0:HH:mm.ss dd.MM.yyyy}'}"
+                                            Header="Time" />
+                                        <GridViewColumn Width="75" Header="Last">
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <ContentControl Content="{Binding Last}" />
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+                                        <GridViewColumn Width="75" Header="Min">
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <ContentControl Content="{Binding Min}" />
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+                                        <GridViewColumn Width="75" Header="Max">
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <ContentControl Content="{Binding Max}" />
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+                                    </GridView.Columns>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </GroupBox>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </DockPanel>
+</Window>
