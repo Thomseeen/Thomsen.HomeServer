@@ -12,28 +12,20 @@
 
         <AssemblyName>HomeServerWidget</AssemblyName>
         <BaseOutputPath>..\..\bin\HomeServerWidget\</BaseOutputPath>
-      <UserSecretsId>103b5ef5-6e94-4d4b-8d6d-3fea0a300837</UserSecretsId>
-  </PropertyGroup>
+        <UserSecretsId>103b5ef5-6e94-4d4b-8d6d-3fea0a300837</UserSecretsId>
+    </PropertyGroup>
 
     <ItemGroup>
-        <None Remove="appsettings.json" />
         <None Remove="Resources\StatusOK.ico" />
         <None Remove="Resources\StatusStopped.ico" />
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="appsettings.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-    </ItemGroup>
-
-    <ItemGroup>
         <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
-        <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="7.0.0" />
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
     </ItemGroup>
 
     <ItemGroup>

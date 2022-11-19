@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 using System;
 using System.IO;
+using System.Reflection;
 
 using Thomsen.HomeServer.Core;
 using Thomsen.HomeServer.Core.InfluxDb;
@@ -16,6 +17,7 @@ public class Program {
         IConfiguration configuration = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddUserSecrets<Program>()
             .Build();
 
         ServiceCollection services = new();
